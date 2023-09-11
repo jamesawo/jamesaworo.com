@@ -10,6 +10,7 @@
 		</a>
 
 		<div class="flex space-x-6">
+			<ng-container *ngIf="showNavigation">
 			<a
 				ariaCurrentWhenActive="page"
 				class="dark:hover:text-pink-600 text-black dark:text-white text-base hover:text-pink-500 font-mono"
@@ -28,6 +29,7 @@
 				[routerLinkActiveOptions]="{ exact: true }">
 				projects
 			</a>
+
 			<a
 				routerLink="/bookmarks"
 				class="dark:hover:text-pink-600 text-black dark:text-white text-base hover:text-pink-500 font-mono"
@@ -36,7 +38,9 @@
 				[routerLinkActiveOptions]="{ exact: true }">
 				bookmarks
 			</a>
+			</ng-container>
 		</div>
+
 		<app-theme-switcher></app-theme-switcher>
 	</nav>
 </section>
