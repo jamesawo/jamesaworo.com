@@ -13,7 +13,7 @@ const getAll = async (event: HandlerEvent) => {
     try {
         await client.connect();
         const db = client.db(process.env['MONGODB_NAME']);
-        return await db.collection('bookmarks').find({}).sort({ created_at: -1 }).toArray();
+        return await db.collection('bookmarks').find({}).sort({ date: -1 }).toArray();
     } catch (err) {
         throw new Error(`${err.message}`);
     } finally {
