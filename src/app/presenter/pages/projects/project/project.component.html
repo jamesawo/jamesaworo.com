@@ -3,8 +3,8 @@
         <div class="w-full p-10 flex flex-col gap-5">
             <h1 class="text-gray-800 font-bold text-2xl">
                 <a [href]="project?.action?.link" target="_blank"
-                    class="text-black dark:text-white hover:text-pink-500 hover:underline dark:hover:text-pink-500 dark:hover:underline"
-                    [innerText]="project?.title"></a>
+                   class="text-black dark:text-white hover:text-pink-500 hover:underline dark:hover:text-pink-500 dark:hover:underline"
+                   [innerText]="project?.title"></a>
 
             </h1>
 
@@ -29,18 +29,19 @@
 
                 </div>
 
-                <div class="flex flex-col gap-2" *ngIf="project?.modules?.length">
-                    <p class="mt-4 text-gray-800 text-sm">
-                        <span class="text-black dark:text-white font-bold">Modules: </span>
-                    </p>
-
-                    <div class="flex flex-row flex-wrap gap-1">
-                        <app-tag *ngFor="let module of project?.modules" [text]="module"></app-tag>
+                <ng-template>
+                    <div class="flex flex-col gap-2" *ngIf="project?.modules?.length">
+                        <p class="mt-4 text-gray-800 text-sm">
+                            <span class="text-black dark:text-white font-bold">Modules: </span>
+                        </p>
+                        <div class="flex flex-row flex-wrap gap-1">
+                            <app-tag *ngFor="let module of project?.modules" [text]="module"></app-tag>
+                        </div>
                     </div>
-                </div>
+                </ng-template>
             </div>
 
-
+            <ng-template>
             <div class="flex flex-col gap-2" *ngIf="project?.industries?.length">
                 <p class="mt-5 text-gray-800 text-sm">
                     <span class="text-black dark:text-white font-bold">Industry: </span>
@@ -49,19 +50,18 @@
                 <div class="flex flex-row flex-wrap gap-1">
                     <app-tag *ngFor="let industry of project?.industries" [text]="industry"></app-tag>
                 </div>
-
             </div>
+            </ng-template>
 
             <div class="flex flex-col gap-2" *ngIf="project?.tools?.length">
                 <p class="mt-2 text-gray-800 text-sm">
-                    <span class="text-black dark:text-white font-bold">Deveopment Tools: </span>
+                    <span class="text-black dark:text-white font-bold">Development Tools: </span>
                 </p>
                 <div class="flex flex-col gap-1">
                     <div class="flex flex-row flex-wrap gap-1">
                         <app-tag *ngFor="let tool of project?.tools" [text]="tool"></app-tag>
                     </div>
                 </div>
-
             </div>
 
             <div class="flex item-center justify-between mt-4" *ngIf="project?.action">
