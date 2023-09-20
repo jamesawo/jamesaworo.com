@@ -13,9 +13,7 @@
     <ng-container *ngIf="projects$ | async as projects; else loading">
         <app-project [project]="project" *ngFor="let project of projects"></app-project>
     </ng-container>
-
 </section>
-
 
 
 <ng-template #loading>

@@ -8,6 +8,13 @@
 
             </h1>
 
+            <ngx-gallery
+                    *ngIf="project?.screenshots && project?.screenshots.length > 0"
+                         [images]="project?.screenshots"
+                         [options]="galleryOptions"
+
+            ></ngx-gallery>
+
             <div class="flex flex-col gap-2 text-black dark:text-white">
                 <div class="block" *ngIf="project?.description">
                     <p class="block text-base" [innerHTML]="project?.description">
@@ -66,8 +73,6 @@
                         <span [innerText]="project?.action?.title"></span>
                     </button>
                 </a>
-
-
 
                 <a
                         class="flex flex-row gap-1 ml-6 text-gray-700 cursor-pointer hover:text-slate-500 dark:hover:text-slate-300 ease-in-out"

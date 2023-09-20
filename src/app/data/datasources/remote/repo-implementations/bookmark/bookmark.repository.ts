@@ -17,7 +17,8 @@ export class BookmarkRepository extends IBookmarkRepository {
     }
 
     public all(): Observable<BookmarkEntity[]> {
-        return this.http.get<BookmarkEntity[]>(`${this.baseUrl}`);
+        // return this.http.get<BookmarkEntity[]>(`${this.baseUrl}`);
+        return this.http.get<BookmarkEntity[]>(`https://raw.githubusercontent.com/jamesawo/mock/main/bookmarks.json`);
     }
 
     public createBookmark(bookmark: BookmarkEntity): Observable<Result> {

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Observable } from 'rxjs';
+import {Observable} from 'rxjs';
 
 import { ProjectRequest } from 'src/app/data/requests/project.request';
 import { IProjectInteractor } from 'src/app/data/interactors/contracts/iproject.interactor';

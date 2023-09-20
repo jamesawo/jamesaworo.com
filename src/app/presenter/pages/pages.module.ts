@@ -12,6 +12,7 @@ import { BookmarkComponent } from './bookmarks/bookmark/bookmark.component';
 import { CommonModule } from '@angular/common';
 import { PostComponent } from './blog/post/post.component';
 import { ProjectComponent } from './projects/project/project.component';
+import {NgxGalleryModule} from "@kolkov/ngx-gallery";
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ProjectComponent } from './projects/project/project.component';
         CommonModule,
         ComponentModule,
         EditorModule,
-        MarkdownModule.forChild()
+        MarkdownModule.forChild(),
+        NgxGalleryModule,
     ]
 })
 export class PagesModule { }

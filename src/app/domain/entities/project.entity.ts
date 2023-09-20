@@ -14,4 +14,5 @@ export class ProjectEntity {
     tools?: string[];
     imageUrl?: string;
     action?: ProjectAction;
+    screenshots: any;
 }

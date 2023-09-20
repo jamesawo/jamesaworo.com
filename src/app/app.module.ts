@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+
 
 import { MarkdownModule } from 'ngx-markdown';
 
@@ -17,9 +19,11 @@ import { PresenterModule } from './presenter/presenter.module';
 
 
 @NgModule({
+    bootstrap: [AppComponent],
     declarations: [
         AppComponent,
     ],
+    exports: [],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
@@ -30,15 +34,14 @@ import { PresenterModule } from './presenter/presenter.module';
         MarkdownModule.forRoot(),
         AppRoutingModule,
         PresenterModule,
+        NgxGalleryModule
     ],
     providers: [
         ...DATA_BOOKMARK_IOC,
         ...DATA_PROJECT_IOC,
         ...DATA_POST_IOC,
         ToastService
-    ],
-    bootstrap: [AppComponent],
-    exports: []
+    ]
 })
 export class AppModule {
 }

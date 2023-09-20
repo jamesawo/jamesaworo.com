@@ -14,8 +14,9 @@ export class ProjectRepository implements IProjectRepository {
     constructor(private http: HttpClient) { }
 
     all(): Observable<ProjectEntity[]> {
-        return this.http
-            .get<ProjectEntity[]>(`${this.baseUrl}`);
+        // return this.http.get<ProjectEntity[]>(`${this.baseUrl}`);
+        return this.http.get<ProjectEntity[]>(`https://raw.githubusercontent.com/jamesawo/mock/main/projects.json`);
+
     }
 
     createProject(project: ProjectEntity): Observable<Result> {
