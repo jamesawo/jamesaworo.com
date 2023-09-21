@@ -1,8 +1,8 @@
 # netlify toml configuration
-[build]
-base = "./"
-publish = "./dist/jamesaworo/"
-command = "npm install --save --legacy-peer-deps && ng build"
+#[build]
+#base = "./"
+#publish = "./dist/jamesaworo/"
+##command = "npm install --save --legacy-peer-deps && ng build"
 
 [functions]
 directory = "/netlify/functions/"
