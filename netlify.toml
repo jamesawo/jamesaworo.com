@@ -2,8 +2,12 @@
 [build]
 base = "./"
 publish = "./dist/jamesaworo/"
-command = "npm install --legacy-peer-deps && ng build"
+command = "ng build"
+
+[build.environment]
+NPM_FLAGS = "--legacy-peer-deps"
+
 
 [functions]
-directory = "/netlify/functions/"
-external_node_modules = ["mongodb", "netlify"]
+    directory = "/netlify/functions/"
+    external_node_modules = ["mongodb", "netlify"]
