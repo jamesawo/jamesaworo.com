@@ -2,7 +2,9 @@
 [build]
 base = "./"
 publish = "./dist/jamesaworo/"
-command = "ng build"
+command = "rm package-lock.json &&
+           rm -rf node_modules &&
+           npm install --save --legacy-peer-deps && ng build"
 
 [functions]
 directory = "/netlify/functions/"
