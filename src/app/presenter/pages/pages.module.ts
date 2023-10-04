@@ -13,6 +13,7 @@ import { CommonModule } from '@angular/common';
 import { PostComponent } from './blog/post/post.component';
 import { ProjectComponent } from './projects/project/project.component';
 import {NgxGalleryModule} from "@kolkov/ngx-gallery";
+import { CertificatesComponent } from './certificates/certificates/certificates.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import {NgxGalleryModule} from "@kolkov/ngx-gallery";
         BookmarkComponent,
         PostDetailComponent,
         ProjectComponent,
+        CertificatesComponent,
     ],
     exports: [
         CommonModule,
