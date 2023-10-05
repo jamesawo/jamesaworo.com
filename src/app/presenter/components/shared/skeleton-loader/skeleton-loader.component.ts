@@ -13,7 +13,7 @@ export enum PageEnum {
 export class SkeletonLoaderComponent {
 
     @Input()
-    public pageEnum!: PageEnum;
+    public pageEnum: PageEnum = PageEnum.bookmark;
 
     public blog = PageEnum.blog;
     public project = PageEnum.project;
