@@ -8,6 +8,7 @@ import { BookmarksComponent } from './presenter/pages/bookmarks/bookmarks.compon
 import { HomeComponent } from './presenter/pages/home/home.component';
 import { ProjectsComponent } from './presenter/pages/projects/projects.component';
 import { NotFoundComponent } from './presenter/components/shared/not-found/not-found.component';
+import {CertificatesComponent} from "./presenter/pages/certificates/certificates/certificates.component";
 
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
 
     { path: 'projects', component: ProjectsComponent },
     { path: 'bookmarks', component: BookmarksComponent },
+    { path: 'professional-certificates', component: CertificatesComponent },
     {
         path: 'editor',
         loadChildren: () => import('./presenter/pages/editor/editor.module').then((c) => c.EditorModule),
