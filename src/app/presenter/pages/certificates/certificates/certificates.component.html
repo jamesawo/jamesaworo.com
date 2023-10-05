@@ -1,1 +1,56 @@
-<p>certificates works!</p>
+<app-header></app-header>
+<section id="intro" class="relative  mt-32">
+    <div class="flex flex-col gap-3 text-dark dark:text-white">
+        <h1 class="text-4xl font-bold ">Professional Certification and Courses</h1>
+
+        <p class="text-justify text-base text-sm">
+            My Learning Journey: A Record of Achievements and Accomplishments
+        </p>
+    </div>
+</section>
+
+<section class="mt-12 flex flex-col gap-8">
+    <div class="flex flex-col gap-3">
+        <a  class="">
+            <h3 class="text-dark dark:text-white font-bold ">Professional Certifications</h3>
+        </a>
+        <ul class="list-disc ml-10" *ngIf="certAndCourses && certAndCourses.certifications; else loading">
+            <li *ngFor="let cert of certAndCourses.certifications">
+                <a *ngIf="cert.verificationUrl; else noLink" [href]="cert?.verificationUrl"  target="_blank"
+                    class="text-dark dark:text-white text-sm hover:underline hover:cursor-pointer"
+                >
+                    {{cert?.title}}
+                </a>
+
+                <ng-template #noLink>
+                    <a class="text-dark dark:text-white text-sm">
+                        {{cert?.title}}
+                    </a>
+                </ng-template>
+            </li>
+        </ul>
+    </div>
+
+    <div class="flex flex-col gap-3">
+        <a class="">
+            <h3 class="text-dark dark:text-white font-bold ">Courses Highlight</h3>
+        </a>
+
+        <ul class="list-disc ml-10" *ngIf="certAndCourses && certAndCourses.certifications; else loading">
+            <li *ngFor="let cert of certAndCourses.courses">
+                <a [href]="cert?.verificationUrl"  target="_blank"
+                   class="text-dark dark:text-white text-sm hover:underline hover:cursor-pointer"
+                >
+                    {{cert?.title}}
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+<ng-template #loading>
+    <div class="mt-20">
+        <app-skeleton-loader></app-skeleton-loader>
+    </div>
+</ng-template>
