@@ -14,6 +14,7 @@ import { PostComponent } from './blog/post/post.component';
 import { ProjectComponent } from './projects/project/project.component';
 import {NgxGalleryModule} from "@kolkov/ngx-gallery";
 import { CertificatesComponent } from './certificates/certificates/certificates.component';
+import { SchoolboxComponent } from './projects/landing/schoolbox/schoolbox.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { CertificatesComponent } from './certificates/certificates/certificates.
         PostDetailComponent,
         ProjectComponent,
         CertificatesComponent,
+        SchoolboxComponent,
     ],
     exports: [
         CommonModule,
