@@ -1,1 +1,408 @@
-<p>schoolbox works!</p>
+<div
+        class="h-screen pb-14 bg-right bg-cover"
+        style="background-image: url('assets/img/bg.svg')">
+    <!--Nav-->
+    <div class="w-full container mx-auto p-6">
+        <div class="w-full flex items-center justify-between">
+            <a
+                    class="flex items-center text-indigo-400 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+                    href="">
+                <!-- <svg
+                    class="h-8 fill-current text-indigo-600 pr-2"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20">
+                    <path
+                        d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm-5.6-4.29a9.95 9.95 0 0 1 11.2 0 8 8 0 1 0-11.2 0zm6.12-7.64l3.02-3.02 1.41 1.41-3.02 3.02a2 2 0 1 1-1.41-1.41z" />
+                </svg> -->
+                SchoolBox
+            </a>
+
+            <div class="flex w-1/2 justify-end content-center">
+                <a
+                        class="inline-block text-blue-300 no-underline hover:text-indigo-800 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4"
+                        data-tippy-content="@twitter_handle"
+                        href="https://twitter.com/intent/tweet?url=#">
+                    <svg
+                            class="fill-current h-6"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 32 32">
+                        <path
+                                d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path>
+                    </svg>
+                </a>
+                <a
+                        class="inline-block text-blue-300 no-underline hover:text-indigo-800 hover:text-underline text-center h-10 p-2 md:h-auto md:p-4"
+                        data-tippy-content="#facebook_id"
+                        href="https://www.facebook.com/sharer/sharer.php?u=#">
+                    <svg
+                            class="fill-current h-6"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 32 32">
+                        <path
+                                d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Main-->
+    <div
+            class="container pt-24 md:pt-48 px-6 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <!--Left Col-->
+        <div
+                class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
+            <h1
+                    class="my-4 text-3xl md:text-5xl text-purple-800 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">
+                Empowering Education<br />with Innovation
+            </h1>
+            <p
+                    class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">
+                SchoolBox, a comprehensive suite of tools designed to
+                revolutionize School management
+            </p>
+
+            <p
+                    class="text-blue-400 font-bold pb-8 lg:pb-6 text-center md:text-left fade-in"></p>
+            <div
+                    class="flex w-full justify-center md:justify-start gap-4 pb-24 lg:pb-0 fade-in">
+                <a
+                        href="https://schoolbox.jamesaworo.com"
+                        class="bg-blue-500 hover:bg-blue-600 text-white py-3 px-8 rounded-full text-center text-lg font-semibold transition duration-300 ease-in-out"
+                        target="_blank"
+                >Live Demo</a
+                >
+                <a
+                        href="https://github.com/jamesawo/schoolbox"
+                        class="bg-gray-400 hover:bg-gray-500 text-indigo-950 py-3 px-8 rounded-full text-center text-lg font-semibold transition duration-300 ease-in-out"
+                        target="_blank"
+                >View on GitHub</a
+                >
+            </div>
+        </div>
+
+        <!--Right Col-->
+        <div class="w-full xl:w-3/5 py-6 overflow-y-hidden">
+            <img
+                    class="w-5/6 mx-auto lg:mr-0 slide-in-bottom"
+                    src="devices.svg" />
+        </div>
+    </div>
+
+    <!-- Add this section below the previous code -->
+    <section class="py-16 bg-indigo-100">
+        <div class="container mx-auto">
+            <div
+                    class="flex flex-col md:flex-row gap-8 justify-between mb-12">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <!-- Project Overview -->
+                    <h2 class="text-3xl font-bold mb-4">
+                        Project Overview
+                    </h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        SchoolBox showcases the potential of technology
+                        to uplift local educational institutions. It's a
+                        comprehensive student lifecycle management
+                        system crafted for all types of schools, from
+                        secondary to university levels. <br />
+                        My goal is to provide a user-friendly,
+                        effective, and innovative tool that empowers
+                        educators, administrators, students, and parents
+                        to collaborate seamlessly, thus enriching the
+                        educational experience.
+                    </p>
+
+                    <p class="text-gray-700 leading-relaxed mt-4">
+                        By leveraging SchoolBox, you can effortlessly
+                        handle complex tasks all consolidated within a
+                        single, integrated system. My passion is to
+                        revolutionize education management for
+                        educational institutions, offering a solution
+                        that's tailored to the needs of various
+                        educational establishments within my local
+                        community.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-4">Motivation</h2>
+                    <p class="text-gray-700 leading-relaxed">
+                        SchoolBox arose from a simple thought: how can
+                        technology be harnessed to help local education?
+                        As a software engineer, my focus has been on
+                        crafting solutions that empower all-size
+                        businesses within my community. <br />
+                        The motivation behind SchoolBox is driven by the
+                        aspiration to equip educational institutions
+                        ranging from secondary schools to universities
+                        with a resilient and adaptable student lifecycle
+                        management system. This project seeks to
+                        contribute to the growth of local enterprises by
+                        offering a tool that streamlines operations,
+                        minimizes complexities, and enhances the quality
+                        of education.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="bg-gray-100 py-16">
+        <div class="container mx-auto text-center">
+            <!-- Section Title -->
+            <h2 class="text-3xl font-bold mb-8">Features</h2>
+
+            <!-- Feature Cards -->
+            <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">
+                        Student Application
+                    </h3>
+                    <p class="text-gray-700">
+                        Seamlessly manage student applications, ensuring
+                        a smooth admissions process.
+                    </p>
+                </div>
+
+                <!-- Feature Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">
+                        Enrollment Management
+                    </h3>
+                    <p class="text-gray-700">
+                        Effortlessly handle student enrollments for
+                        various courses and programs.
+                    </p>
+                </div>
+
+                <!-- Feature Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">
+                        Course Registration
+                    </h3>
+                    <p class="text-gray-700">
+                        Streamline course sign-ups and registrations
+                        with a user-friendly interface.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">
+                        Fee and Payment Tracking
+                    </h3>
+                    <p class="text-gray-700">
+                        Keep track of fees and payments, simplifying
+                        financial management.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">
+                        Result Management
+                    </h3>
+                    <p class="text-gray-700">
+                        Easily record and access student grades and
+                        academic progress
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">
+                        Staff Administration
+                    </h3>
+                    <p class="text-gray-700">
+                        Efficiently manage staff details, roles, and
+                        responsibilities.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">
+                        Student Management
+                    </h3>
+                    <p class="text-gray-700">
+                        Manage student records effortlessly, import and
+                        export data to Excel, pdf, easily.
+                    </p>
+                </div>
+                <!-- <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">
+                        Authentication and Authorization
+                    </h3>
+                    <p class="text-gray-700">
+                        Ensure secure access with robust authentication
+                        and authorization mechanisms.
+                    </p>
+                </div> -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">
+                        Hostel Management
+                    </h3>
+                    <p class="text-gray-700">
+                        Organize and manage hostel accommodations for
+                        students.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-semibold mb-4">
+                        Library Management
+                    </h3>
+                    <p class="text-gray-700">
+                        Simplify library operations, including book
+                        cataloging and borrowing.
+                    </p>
+                </div>
+            </div>
+
+            <!-- <p class="text-gray-700 mt-8">
+                Explore additional features designed to enhance
+                education management for institutions of all sizes as I
+                improve, and add more features.
+            </p> -->
+        </div>
+    </section>
+
+    <section class="bg-indigo-100 py-16">
+        <div class="container mx-auto">
+            <!-- Section Title -->
+            <h2 class="text-3xl font-bold text-center mb-8">
+                Tools and Technology
+            </h2>
+            <div
+                    class="container text-center flex flex-row flex-wrap gap-4 justify-center">
+                <img
+                        src="https://img.shields.io/badge/Java-007396?style=for-the-badge&logo=java&logoColor=white"
+                        alt="Java" />
+
+                <img
+                        src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white"
+                        alt="bootstrap" />
+
+                <img
+                        src="https://img.shields.io/badge/Thymeleaf-005F0F?style=for-the-badge&logo=thymeleaf&logoColor=white"
+                        alt="Thymeleaf" />
+
+                <img
+                        src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white"
+                        alt="HTML" />
+                <img
+                        src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"
+                        alt="CSS" />
+
+                <img
+                        src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"
+                        alt="Java" />
+
+                <img
+                        src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white"
+                        alt="jQuery" />
+
+                <img
+                        src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white"
+                        alt="spring" />
+
+                <img
+                        src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white"
+                        alt="postgresql" />
+                <img
+                        src="https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white"
+                        alt="AWS" />
+
+                <img
+                        src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=Jenkins&logoColor=white"
+                        alt="Jenkins" />
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-gray-100 py-16">
+        <div class="container mx-auto">
+            <!-- Section Title -->
+            <h2 class="text-3xl font-bold text-center mb-8">
+                SchoolBox in Action
+            </h2>
+
+            <!-- Screenshot Gallery (3x3 Grid) -->
+            <div
+                    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Screenshot 1 -->
+                <div
+                        class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img
+                            src="https://res.cloudinary.com/dmcsnsw1f/image/upload/w_600,c_scale/v1695236386/SchoolBox/01-student-facing.png"
+                            alt="Screenshot 1"
+                            class="w-full h-auto" />
+                </div>
+
+                <!-- Screenshot 2 -->
+                <div
+                        class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img
+                            src="https://res.cloudinary.com/dmcsnsw1f/image/upload/w_600,c_scale/v1695236382/SchoolBox/02-student-management.png"
+                            alt="Screenshot 2"
+                            class="w-full h-auto" />
+                </div>
+
+                <!-- Screenshot 3 -->
+                <div
+                        class="bg-white rounded-lg overflow-hidden shadow-lg">
+                    <img
+                            src="https://res.cloudinary.com/dmcsnsw1f/image/upload/w_600,c_scale/v1695236395/SchoolBox/03-institution-setup.png"
+                            alt="Screenshot 3"
+                            class="w-full h-auto" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white py-16">
+        <div class="container mx-auto text-center">
+            <!-- Section Title -->
+            <h2 class="text-3xl font-bold mb-8">
+                Live Demo and View Code
+            </h2>
+
+            <!-- Demo and GitHub Links -->
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <!-- Live Demo Button -->
+                <a
+                        href="https://schoolbox.jamesaworo.com"
+                        class="bg-blue-500 hover:bg-blue-600 text-white py-3 px-8 rounded-full text-center text-lg font-semibold transition duration-300 ease-in-out"
+                        target="_blank"
+                >Live Demo</a
+                >
+                <!-- GitHub Repository Button -->
+                <a
+                        href="https://github.com/jamesawo/schoolbox"
+                        class="bg-gray-400 hover:bg-gray-500 text-indigo-950 py-3 px-8 rounded-full text-center text-lg font-semibold transition duration-300 ease-in-out"
+                        target="_blank"
+                >View on GitHub</a
+                >
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this section below the previous code -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <!-- Contact Information -->
+            <p class="text-lg">
+                Contact me at
+                <a
+                        href="mailto:james.aworo@outlook.com"
+                        class="text-blue-500 hover:underline"
+                >james.aworo@outlook.com</a
+                >
+            </p>
+
+            <!-- Social Media Icons (Optional) -->
+            <div class="mt-4">
+            </div>
+
+            <!-- Copyright Information -->
+            <p class="mt-4">
+                &copy; <span id="date">2024</span>. Made with
+                <span style="color: #e25555">&#9829;</span> by James
+                Aworo
+            </p>
+        </div>
+    </footer>
+</div>
