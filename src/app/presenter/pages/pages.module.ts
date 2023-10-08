@@ -15,6 +15,7 @@ import { ProjectComponent } from './projects/project/project.component';
 import {NgxGalleryModule} from "@kolkov/ngx-gallery";
 import { CertificatesComponent } from './certificates/certificates/certificates.component';
 import { SchoolboxComponent } from './projects/landing/schoolbox/schoolbox.component';
+import { StockyComponent } from './projects/landing/stocky/stocky.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { SchoolboxComponent } from './projects/landing/schoolbox/schoolbox.compo
         ProjectComponent,
         CertificatesComponent,
         SchoolboxComponent,
+        StockyComponent,
     ],
     exports: [
         CommonModule,
