@@ -1,51 +1,148 @@
 <app-header></app-header>
 <section id="intro" class="relative  mt-32">
     <div class="flex flex-col gap-3 text-dark dark:text-white">
-        <h1 class="text-4xl font-bold ">Professional Certification and Courses</h1>
+        <h1 class="text-4xl font-bold ">Personal Development</h1>
 
         <p class="text-justify text-base text-sm">
-            My Learning Journey: A Record of Achievements and Accomplishments
+            My Learning Journey: A Record of professional certifications, specialization, achievements and accomplishments
         </p>
     </div>
 </section>
 
+<!--
+<section class="relative mt-12">
+    <div class="flex flex-col gap-3 text-dark dark:text-white">
+        <ng-container *ngIf="data && data.certifications">
+            <div class="flex flex-col gap-1" *ngFor="let certificate of data.certifications">
+                <p class="text-justify text-lg font-semibold mt-5">
+                    <a class="hover:underline hover:text-blue-900" [href]="certificate.verificationUrl" target="_blank">{{certificate.title}}</a>
+                </p>
+
+                <div class="flex flex-row gap-2">
+                    <span class="font-bold text-sm"> {{certificate.organization.name}},</span>
+                    <span class="text-sm mr-5">{{certificate.date}}</span>
+                </div>
+
+
+                <div class="mt-3 flex flex-row flex-wrap gap-2 ">
+                    <span class="text-sm">Verify: </span>
+                    <a class="text-sm text-blue-900 underline" [href]="certificate.verificationUrl" target="_blank">{{certificate.verificationUrl}}</a>
+                </div>
+
+                <div class="mt-1 flex flex-row flex-wrap gap-2" *ngIf="certificate.skills && certificate.skills.length > 0">
+                    <span class="text-sm">Relevant Skills: </span>
+                    <ng-container *ngFor="let skill of certificate.skills">
+                        <app-tag class="text-sm" [text]="skill"></app-tag>
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</section>
+-->
+
+
 <section class="mt-12 flex flex-col gap-8">
+
     <div class="flex flex-col gap-3">
-        <a  class="">
+        <a class="">
             <h3 class="text-dark dark:text-white font-bold ">Professional Certifications</h3>
         </a>
-        <ul class="list-disc ml-10" *ngIf="certAndCourses && certAndCourses.certifications; else loading">
-            <li *ngFor="let cert of certAndCourses.certifications">
-                <a *ngIf="cert.verificationUrl; else noLink" [href]="cert?.verificationUrl"  target="_blank"
-                    class="text-dark dark:text-white text-sm hover:underline hover:cursor-pointer"
-                >
-                    {{cert?.title}}
-                </a>
 
-                <ng-template #noLink>
-                    <a class="text-dark dark:text-white text-sm">
-                        {{cert?.title}}
-                    </a>
-                </ng-template>
+        <ul class="list-disc ml-10" *ngIf="data && data.certifications; else loading">
+            <li *ngFor="let certificate of data.certifications">
+                <div class="flex flex-col gap-1">
+                    <p class="text-justify font-semibold mt-5">
+                        <a class="hover:underline hover:text-blue-900" [href]="certificate.verificationUrl" target="_blank">{{certificate.title}}</a>
+                    </p>
+
+                    <div class="flex flex-row gap-2">
+                        <span class="font-bold text-sm"> {{certificate.organization.name}},</span>
+                        <span class="text-sm mr-5">{{certificate.date}}</span>
+                    </div>
+
+                    <div class="mt-3 flex flex-row flex-wrap gap-2 ">
+                        <span class="text-sm">Verify: </span>
+                        <a class="text-sm text-blue-900 underline" [href]="certificate.verificationUrl" target="_blank">{{certificate.verificationUrl}}</a>
+                    </div>
+
+                    <div class="mt-1 flex flex-row flex-wrap gap-2" *ngIf="certificate.skills && certificate.skills.length > 0">
+                        <span class="text-sm">Relevant Skills: </span>
+                        <ng-container *ngFor="let skill of certificate.skills">
+                            <app-tag class="text-sm" [text]="skill"></app-tag>
+                        </ng-container>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
 
     <div class="flex flex-col gap-3">
         <a class="">
-            <h3 class="text-dark dark:text-white font-bold ">Courses Highlight</h3>
+            <h3 class="text-dark dark:text-white font-bold ">Specializations</h3>
         </a>
 
-        <ul class="list-disc ml-10" *ngIf="certAndCourses && certAndCourses.certifications; else loading">
-            <li *ngFor="let cert of certAndCourses.courses">
-                <a [href]="cert?.verificationUrl"  target="_blank"
-                   class="text-dark dark:text-white text-sm hover:underline hover:cursor-pointer"
-                >
-                    {{cert?.title}}
-                </a>
+        <ul class="list-disc ml-10" *ngIf="data && data.specialization; else loading">
+            <li *ngFor="let certificate of data.specialization">
+                <div class="flex flex-col gap-1">
+                    <p class="text-justify font-semibold mt-5">
+                        <a class="hover:underline hover:text-blue-900" [href]="certificate.verificationUrl" target="_blank">{{certificate.title}}</a>
+                    </p>
+
+                    <div class="flex flex-row gap-2">
+                        <span class="font-bold text-sm"> {{certificate.organization.name}},</span>
+                        <span class="text-sm mr-5">{{certificate.date}}</span>
+                    </div>
+
+                    <div class="mt-3 flex flex-row flex-wrap gap-2 ">
+                        <span class="text-sm">Verify: </span>
+                        <a class="text-sm text-blue-900 underline" [href]="certificate.verificationUrl" target="_blank">{{certificate.verificationUrl}}</a>
+                    </div>
+
+                    <div class="mt-1 flex flex-row flex-wrap gap-2" *ngIf="certificate.skills && certificate.skills.length > 0">
+                        <span class="text-sm">Relevant Skills: </span>
+                        <ng-container *ngFor="let skill of certificate.skills">
+                            <app-tag class="text-sm" [text]="skill"></app-tag>
+                        </ng-container>
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
+
+    <div class="flex flex-col gap-3">
+        <a class="">
+            <h3 class="text-dark dark:text-white font-bold ">Courses/Certificate</h3>
+        </a>
+
+        <ul class="list-disc ml-10" *ngIf="data && data.courses; else loading">
+            <li *ngFor="let certificate of data.courses">
+                <div class="flex flex-col gap-1">
+                    <p class="text-justify font-semibold mt-5">
+                        <a class="hover:underline hover:text-blue-900" [href]="certificate.verificationUrl" target="_blank">{{certificate.title}}</a>
+                    </p>
+
+                    <div class="flex flex-row gap-2">
+                        <span class="font-bold text-sm"> {{certificate.organization.name}},</span>
+                        <span class="text-sm mr-5">{{certificate.date}}</span>
+                    </div>
+
+                    <div class="mt-3 flex flex-row flex-wrap gap-2 ">
+                        <span class="text-sm">Verify: </span>
+                        <a class="text-sm text-blue-900 underline" [href]="certificate.verificationUrl" target="_blank">{{certificate.verificationUrl}}</a>
+                    </div>
+
+                    <div class="mt-1 flex flex-row flex-wrap gap-2" *ngIf="certificate.skills && certificate.skills.length > 0">
+                        <span class="text-sm">Relevant Skills: </span>
+                        <ng-container *ngFor="let skill of certificate.skills">
+                            <app-tag class="text-sm" [text]="skill"></app-tag>
+                        </ng-container>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
 </section>
 
 
