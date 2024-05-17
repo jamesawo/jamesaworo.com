@@ -1,4 +1,3 @@
-import { Result } from 'src/app/core/types/types';
 import { of, Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -18,8 +17,10 @@ export const MOCK_PROJECT: ProjectEntity[] = [
         "imageUrl": '',
         "action": {
             "link": "http://project.link",
-            "title": "View Project"
+            "title": "View Project",
+            "github": "",
         },
+        "screenshots": ""
     },
 ];
 
