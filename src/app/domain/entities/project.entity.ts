@@ -1,7 +1,7 @@
 export type ProjectAction = {
     title: string;
     link: string;
-    github:string;
+    github: string;
 }
 
 export class ProjectEntity {
