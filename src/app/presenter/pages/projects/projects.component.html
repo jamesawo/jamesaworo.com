@@ -1,23 +1,36 @@
 <app-header></app-header>
 <section id="intro" class="relative mt-32">
-    <div class="flex flex-col gap-5 text-dark dark:text-white">
-        <h1 class="text-4xl font-bold ">Projects</h1>
+	<div class="flex flex-col gap-5 text-dark dark:text-white">
+		<h1 class="text-4xl font-bold">Projects</h1>
 
-        <p class="text-md">
-            My projects range from web, desktop, mobile apps, plugin and dev tools.
-        </p>
-    </div>
+		<p class="text-md">
+			My projects range from web, desktop, mobile apps, plugins and
+			dev-tools.
+		</p>
+
+		<p class="text-md">
+			Here are a few of my projects with live demos, but you can find more
+			on my
+			<a
+				target="_blank"
+				href="https://github.com/jamesawo/"
+				class="text-blue-500 dark:text-white hover:text-pink-500 hover:underline dark:hover:text-pink-500 dark:hover:underline"
+				>GitHub</a
+			>
+		</p>
+	</div>
 </section>
 
 <section class="mt-12">
-    <ng-container *ngIf="projects$ | async as projects; else loading">
-        <app-project [project]="project" *ngFor="let project of projects"></app-project>
-    </ng-container>
+	<ng-container *ngIf="projects$ | async as projects; else loading">
+		<app-project
+			[project]="project"
+			*ngFor="let project of projects"></app-project>
+	</ng-container>
 </section>
 
-
 <ng-template #loading>
-    <div class="mt-10">
-        <app-skeleton-loader [pageEnum]="page"></app-skeleton-loader>
-    </div>
+	<div class="mt-10">
+		<app-skeleton-loader [pageEnum]="page"></app-skeleton-loader>
+	</div>
 </ng-template>

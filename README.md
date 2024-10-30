@@ -1,15 +1,17 @@
 # jamesaworo.com
 
-This is my personal blog website that I built using Angular, Netlify Edge Functions, MongoDB, and TypeScript. 
+This is my personal blog website that I built using Angular, Netlify Edge Functions, MongoDB, and TypeScript.
+**Note:** The domain name has recently been changed from `jamesaworo.com` to `jamesaworo.me`.
+
 The website is deployed on Netlify and the blog content is hosted on Hashnode.
 
 ## Features
 
-- Responsive design
-- Dynamic content fetching from Hashnode
-- Serverless functions for backend logic
-- MongoDB database for storing projects and bookmarks
-- Custom domain and SSL certificate
+-   Responsive design
+-   Dynamic content fetching from Hashnode
+-   Serverless functions for backend logic
+-   MongoDB database for storing projects and bookmarks
+-   Custom domain and SSL certificate
 
 ## Tools
 
@@ -27,7 +29,7 @@ The following tools were used to build this project:
 
 To run this project locally, you need to have Node.js, Angular CLI, and Netlify CLI installed on your machine.
 
-1. Clone this repository using 
+1. Clone this repository using
    `git clone https://github.com/jamesawo/jamesaworo.com.git`.
 2. Navigate to the project folder using  
    `cd jamesaworo.com`.
@@ -42,9 +44,8 @@ MONGODB_NAME=
 
 5. Run the development server using  
    `netlify dev`.
-6. Open your browser and go to   
+6. Open your browser and go to  
    `http://localhost:8888`.
-
 
 ## License
 
